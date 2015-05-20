@@ -5,7 +5,7 @@
 /** Step 1: Declare Var
  *
  */
-var fUserName;
+var sUserName;
 
 /** Step 2: Ask User his name
  *
@@ -15,4 +15,4 @@ sUserName = prompt("Quel est votre nom?");
 /** Step 3: Display on screen user name in Emphasis
 *
  */
-document.write("Bonjour <strong>" + sUserName + "</strong>");
+document.write("<p>Bonjour <strong>" + sUserName + "</strong></p>");

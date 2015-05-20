@@ -8,11 +8,11 @@
 var sUserName;
 var iUserAge;
 
-/** Step 2: Get User name and Age
+/** Step 2: Get User name and iAge
  *
  */
 sUserName = prompt("Quel est votre nom?");
-iUserAge  = prompt("Quel est votre age?");
+iUserAge  = prompt("Quel est votre iAge?");
 
 /** Step 3: Display User Name with the word "junior" at the end
  *
@@ -23,4 +23,4 @@ iUserAge  = prompt("Quel est votre age?");
  * If user is 10 years old, s/he exist for 11 years.
  */
 iUserAge++;
-document.write("<br> Votre age reel: " + iUserAge  );
+document.write("<br> Votre iAge reel: " + iUserAge  );

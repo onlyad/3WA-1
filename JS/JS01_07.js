@@ -13,7 +13,7 @@ const fTVQ = 0.09975; //Pour la TVQ
 // Declare Variable
 var fTotalB4Tax;
 var fTotalAfterTax;
-var fTax, fTaxTPS, fTaxTVQ;
+var fTaxTPS, fTaxTVQ;
 var fRebatePercentage, fTotalAfterRebatePercentage;
 
 /**
