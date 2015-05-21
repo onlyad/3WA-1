@@ -3,13 +3,15 @@
  */
 
 
-const fNormalPrice = 100;
-const sIfClientGetDiscount = "Avez vous une reduction? (O)ui/ (N)on";
-const sClientDiscountPercentage = "Quel est le percentage de reduction?";
+const fNORMAL_PRICE = 100;
+const sIF_CLIENT_GET_DISCOUNT = "Avez vous une reduction? (O)ui/ (N)on";
+const sCLIENT_DISCOUNT_PERCENTAGE = "Quel est le percentage de reduction?";
 
 var bIfClientGetDiscount;
 var fActualPrice;
 var fDiscountAmount;
+var fPriceAfterDiscount;
+var fPriceAfterTax;;
 var iAge;
 var iDiscountPercentage;
 
@@ -17,26 +19,30 @@ var iDiscountPercentage;
 
 iAge = prompt("Votre age?");
 
-bIfClientGetDiscount = confirm(sIfClientGetDiscount);
+bIfClientGetDiscount = confirm(sIF_CLIENT_GET_DISCOUNT);
 if (bIfClientGetDiscount == true ){
-    iDiscountPercentage = prompt(sClientDiscountPercentage );
+    iDiscountPercentage = prompt(sCLIENT_DISCOUNT_PERCENTAGE );
 }
 
 if (iAge < 18) {
     document.write("<p> Vous payez rien!</p>");
 }
 else if (iAge < 25) {
-    fActualPrice = fNormalPrice / 2;
+    fActualPrice = fNORMAL_PRICE / 2;
     document.write("<p>Vous payez la moitie prix: " + fActualPrice.toFixed(2) +"</p>");
 
 }
 else if (iAge > 77) {
     document.write("<p> Vous n'avez pas à payer, c'est gratuit !</p>")
 }
-else if (sIfClientGetDiscount.toUpperCase() == "O"){
+else if (sIF_CLIENT_GET_DISCOUNT.toUpperCase() == "O"){
+    fDiscountAmount = fNORMAL_PRICE * iDiscountPercentage /100;
+    fPriceAfterDiscount = fNORMAL_PRICE - fDiscountAmount;
+    fPriceAfterTax =  fPriceAfterDiscount *
 
     document.write("<ol>" +
-    "<li> Prix Hors Taxe: "+ fNormalPrice + "</li>" +
+    "<li> Prix Hors Taxe: "+ fNORMAL_PRICE + "</li>" +
+    "<li> Montant de reduction: " + fDiscountAmount + "</li>" +
     "</ol>" );
 }
 
