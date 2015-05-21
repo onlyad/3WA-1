@@ -69,3 +69,5 @@ for (var iPhrasesPosition = 1; iPhrasesPosition < aPHRASES.length; iPhrasesPosit
 }
 
 document.write("<br>The Position:" + iLongestPhrasePosition + "Phrase: " + aPHRASES[iLongestPhrasePosition]);
+document.write("<br>The Position:" + iShortestPhrasePosition + "Phrase: " + aPHRASES[iShortestPhrasePosition]);
+
