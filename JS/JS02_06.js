@@ -29,7 +29,10 @@ for (var iCounter = 1; iCounter <= iVAL_MAX; iCounter += 2) {
 var iValue;
 
 for (var iOddNumber = 0; iOddNumber <= 999; iOddNumber += 2) {
-    
+    iValue = 0;
+
+
+
 }
 
 
